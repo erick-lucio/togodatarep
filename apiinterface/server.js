@@ -41,8 +41,8 @@ server.get('/getusers',(req,res)=>{
         res.json(response.data)
     })
      .catch(function (error) {
-        console.log(err)
-        res.send("error")
+        console.log(error)
+        
     })
     
 })
@@ -50,3 +50,5 @@ server.get('/getusers',(req,res)=>{
 server.listen(port,()=>{
     console.log("Rodando na porta : "+port)
 })
+
+module.exports = server
