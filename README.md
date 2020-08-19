@@ -33,16 +33,16 @@
 - npm run dev //nodemon server.js
 - npm run teste //roda alguns teste de tipo de retorno , antes de executar esse teste inicie a api1
 ```
-###### GET http://localhost:3200/users
+###### GET http://localhost:3200/getusers
     Formato de Resposta :JSON     
 
-###### POST http://localhost:3200/users
+###### POST http://localhost:3200/cruser
     Formato de Resposta :JSON 
     Parametros body
     name   :Obrigatorio
     password   :Obrigatorio
 
-###### DELETE http://localhost:3200/users/:userId
+###### DELETE http://localhost:3200/deluser/:userId
     Formato de Resposta :JSON 
     Parametros url
     userId   :Obrigatorio //string de 12 bytes
