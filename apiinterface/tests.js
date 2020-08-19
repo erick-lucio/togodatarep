@@ -1,9 +1,9 @@
 const supertest = require("supertest");
-
+const crypto = require("crypto")
 const server = require("./server");
 
-describe("GET /getusers", ()=> {
-  it("it should has status code 200 ", (done)=> {
+describe("Testando retorno das rotas apiinterface", ()=> {
+  it("GET /getusers esperando codigo 200 ", (done)=> {
     supertest(server)
       .get("/getusers")
       .send({        
@@ -18,7 +18,7 @@ describe("GET /getusers", ()=> {
         }        
       });
   });
-  it("it should has status code 200 ", (done)=> {
+  it("POST /cruser esperando codigo 200", (done)=> {
     supertest(server)
       .post("/cruser")
       .send({        
@@ -34,9 +34,9 @@ describe("GET /getusers", ()=> {
         }       
       });
   });
-  it("it should has status code 200 ", (done)=> {
+  it("DELETE /deluser esperando codigo 200", (done)=> {
     supertest(server)
-      .delete("/deluser/")
+      .delete("/deluser/"+crypto.randomBytes(12).toString('hex'))
       .send({        
 
       })

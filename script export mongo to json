@@ -1,0 +1,1 @@
+mongoexport "mongodb+srv://erick:erickerick1@cluster0.7ixrs.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority" --collection users --fields "_id,name,password" > data.json

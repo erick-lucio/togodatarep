@@ -12,7 +12,7 @@ const uri = "mongodb+srv://erick:erickerick1@cluster0.7ixrs.gcp.mongodb.net/<dbn
 const mongoose = require('mongoose');
 mongoose.connect(uri, {useNewUrlParser: true, useUnifiedTopology: true});
 
-
+//mongoexport --host " mongodb://erick:erickerick1@cluster0.7ixrs.gcp.mongodb.net/<dbname>?retryWrites=true&w=majority"  --collection data > data.json
 
 server.get('/',(req,res)=>{
     res.send("<html><h1>Pagina nao encontrada</h1></html>")
@@ -66,6 +66,7 @@ server.listen(port,()=>{
     console.log("Rodando na porta : "+port)
 })
 
+module.exports = server
 /*
 
 

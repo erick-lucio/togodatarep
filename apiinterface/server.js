@@ -17,20 +17,24 @@ server.post('/cruser',async function(req,res){
             _name: name,
             _password: password
         })
-       res.json(response.data)
+       res.status(200).json(response.data)
 
     }else{
-        res.json("Error") 
+        res.status(500).json("Error") 
     }
      
 })
 server.delete('/deluser/:userId',async function(req,res){
     const id = req.params.userId    
-    
-    const response = await axios.delete('http://localhost:3150/users/'+id,{
+    try{
+        const response = await axios.delete('http://localhost:3150/users/'+id,{})
+        res.status(200).json(response.data)
+    }catch(error){
+        res.status(500).send("Error") 
+    }
 
-    })
-    res.json(response.data)
+    
+
 
   
 })
@@ -38,10 +42,10 @@ server.get('/getusers',(req,res)=>{
     axios.get('http://localhost:3150/users')
       .then(function (response) {
         
-        res.json(response.data)
+        res.status(200).json(response.data)
     })
      .catch(function (error) {
-        console.log(error)
+        res.status(500).json("Error") 
         
     })
     

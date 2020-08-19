@@ -58,8 +58,8 @@ function App() {
     <>
       <div className="main_class">
           <div className="div1">
-              <input placeholder="Insira seu nome" id="name_input" className="inputs"></input>
-              <input placeholder="Insira sua senha" id="password_input" className="inputs"></input>
+              Username : <input placeholder="Insira seu nome" id="name_input" className="inputs"></input>
+              Password : <input placeholder="Insira sua senha" id="password_input" className="inputs"></input>
               <button onClick={()=>createUser()} className="inputs">Criar usuario</button>
           </div>
 
