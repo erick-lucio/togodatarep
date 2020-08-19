@@ -1,4 +1,4 @@
-# Documentação das api e reactapp
+# Documentação das apis e reactapp
 ###### Primeiro Inicie a /apibanco depois a /apiinterface  depois o /togoweb
 ## /apibanco > Api utilizando Node,Express
 ###### 
